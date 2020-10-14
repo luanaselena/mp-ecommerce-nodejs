@@ -1,3 +1,4 @@
+
 <div class="as-search-wrapper" role="main">
     <div class="as-navtuck-wrapper">
         <div class="as-l-fullwidth  as-navtuck" data-events="event52">
@@ -67,7 +68,7 @@
 
                         </div>
                         <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                            <form method="post">
+                            <form action="/payment/new" method="post/{{ title, price, unit, img }}">
                                 <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                     <div class="as-producttile-title">
                                         <h3 class="as-producttile-name">
@@ -84,7 +85,7 @@
                                         {{ unit }}
                                     </h3>
                                 </div>
-                                <button type="submit" onclick="{{ createPaymentMercadoPago(title, price, unit, img) }}" class="mercadopago-button" formmethod="post">Pagar</button>
+                                <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                             </form>
                         </div>
                     </div>
