@@ -68,7 +68,7 @@
 
                         </div>
                         <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                            <form action="/payment/new" method="post/{{ title, price, unit, img }}">
+                            <form action="/payment/new" method="post">
                                 <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                     <div class="as-producttile-title">
                                         <h3 class="as-producttile-name">
@@ -85,6 +85,10 @@
                                         {{ unit }}
                                     </h3>
                                 </div>
+                                <input type="hidden" name="name" value={{ title }}>
+                                <input type="hidden" name="price" value= {{ price}}>
+                                <input type="hidden" name="unit" value={{ unit }}>
+                                <input type="hidden" name="img" value= {{ img }}>
                                 <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                             </form>
                         </div>
