@@ -19,6 +19,14 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.get('/pending', function (req, res) {
+  res.render('pending', req.query);
+});
+
+app.get('/failure', function (req, res) {
+  res.render('failure', req.query);
+});
+
 app.post("/payment/new", (req, res) => 
   PaymentInstance.getMercadoPagoLink(req, res) 
 );

@@ -48,6 +48,13 @@ class PaymentService {
               street_number: "123"
             }
           }, 
+          // declaramos las urls de redireccionamiento
+          back_urls: { 
+            success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/success", 
+            pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
+            failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
+          }, 
+          auto_return: "approved", //aca contempla que en caso de aprovado el retorno sea automatico
           payment_methods: { 
             //aca configuramos los metodos de pago que queremos excluir (American Express y atm)
             excluded_payment_methods: [ 
@@ -61,16 +68,9 @@ class PaymentService {
             //se configura que el maximo de cuotas permitidas seran 6, y que aparezcan por defecto tambien 6. 
             installments: 6, 
             default_installments: 6 
-          }, 
-          // declaramos las urls de redireccionamiento
-          back_urls: { 
-            //success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/success", 
-            //pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
-            //failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
-          }, 
+          },
           notification_url: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/webhook", 
-          auto_return: "approved" 
-        // si la compra es exitosa automaticamente redirige a "success" de back_urls
+          statement_descriptor: "TiendaEcommerce", 
         };
     
         //se hace el post a la url que declaramos, con las preferencias y el header
