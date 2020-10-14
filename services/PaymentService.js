@@ -68,7 +68,7 @@ class PaymentService {
             pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
             failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
           }, 
-          notification_url: "https://https://luanaselena-mp-commerce-nodejs.herokuapp.com/webhook", 
+          notification_url: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/webhook", 
           auto_return: "approved" 
         // si la compra es exitosa automaticamente redirige a "success" de back_urls
         };
