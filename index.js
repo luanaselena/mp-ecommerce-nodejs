@@ -29,7 +29,7 @@ app.get('/failure', function (req, res) {
 
 app.post("/payment/new", (req, res) => 
   PaymentInstance.getMercadoPagoLink(req, res) 
-);
+)
 
 app.post("/webhook", (req, res) => PaymentInstance.webhook(req, res));
 

@@ -1,4 +1,3 @@
-
 <div class="as-search-wrapper" role="main">
     <div class="as-navtuck-wrapper">
         <div class="as-l-fullwidth  as-navtuck" data-events="event52">
@@ -68,27 +67,24 @@
 
                         </div>
                         <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                            <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
-                                <div class="as-producttile-title">
-                                    <h3 class="as-producttile-name">
-                                        <p class="as-producttile-tilelink">
-                                            <span data-ase-truncate="2"> {{ title }} </span>
-                                        </p>
+                            <form method="post">
+                                <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
+                                    <div class="as-producttile-title">
+                                        <h3 class="as-producttile-name">
+                                            <p class="as-producttile-tilelink">
+                                                <span data-ase-truncate="2"> {{ title }} </span>
+                                            </p>
 
+                                        </h3>
+                                    </div>
+                                    <h3 >
+                                        {{ price }}
+                                    </h3>
+                                    <h3 >
+                                        {{ unit }}
                                     </h3>
                                 </div>
-                                <h3 >
-                                    {{ price }}
-                                </h3>
-                                <h3 >
-                                    {{ unit }}
-                                </h3>
-                            </div>
-                            <form method="POST">
-                                <script
-                                    src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                                    data-preference-id='<%= global.id %>'>
-                                </script>
+                                <button type="submit" onclick="{{ createPaymentMercadoPago(title, price, unit, img) }}" class="mercadopago-button" formmethod="post">Pagar</button>
                             </form>
                         </div>
                     </div>
