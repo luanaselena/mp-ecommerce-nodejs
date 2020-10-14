@@ -14,7 +14,7 @@ class PaymentService {
   }
 
   // recibe las props que le mandamos desde el PaymentController
-  async createPaymentMercadoPago(nombre, precio, cantidad, img) {  
+  async createPaymentMercadoPago(name, price, unit, img) {  
     
     //configuro la url aca asi queda accesible a toda la class
     const url = `${this.mercadoPagoUrl}/preferences?access_token=${this.tokensMercadoPago.test.access_token}`; 
@@ -24,13 +24,13 @@ class PaymentService {
           items: [
             {
               id: "1234", 
-              title: nombre, //lo recibe en el controlador
+              title: name, //lo recibe en el controlador
               description: "Dispositivo movil de Tienda e-commerce",
               picture_url: img, //la recibe en el controlador
               category_id: "1234",  
-              quantity: parseInt(cantidad), //lo recibe en el controlador
+              quantity: parseInt(unit), //lo recibe en el controlador
               currency_id: "ARS", //id de la moneda
-              unit_price: parseFloat(precio) //lo recibe en el controlador
+              unit_price: parseFloat(price) //lo recibe en el controlador
             } //si se quisiera agregar otro item, se agrega otro en este array
           ],
           external_reference: "referencia del negocio", 

@@ -8,9 +8,9 @@ class PaymentController  {
         try {
             //recibe de createPaymentMercadoPago informacion del producto
           const checkout = await this.paymentService.createPaymentMercadoPago(
-            nombre, // nombre del producto
-            precio, //precio del producto 
-            cantidad,  //cantidad que estamos vendiendo
+            name, // nombre del producto
+            price, //precio del producto 
+            unit,  //cantidad que estamos vendiendo
             img  // imagen de referencia del producto o servicio
           );
     

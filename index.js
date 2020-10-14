@@ -19,7 +19,7 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
-app.post("/payment/nuevo", (req, res) => 
+app.post("/payment/new", (req, res) => 
   PaymentInstance.getMercadoPagoLink(req, res) 
 );
 
