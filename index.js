@@ -3,9 +3,9 @@ var exphbs  = require('express-handlebars');
  
 var app = express();
 
-//se importa el controller y service de Compra y se permite que el controller use el service
+//se importa el controller y service de Payment y se permite que el controller use el service
 const PaymentController = require("./controllers/PaymentController");
-const PaymentService = require("./services/CompraService"); 
+const PaymentService = require("./services/PaymentService"); 
 const PaymentInstance = new PaymentController(new PaymentService()); 
  
 app.engine('handlebars', exphbs());
