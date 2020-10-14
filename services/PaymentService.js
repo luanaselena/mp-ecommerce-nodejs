@@ -64,9 +64,9 @@ class PaymentService {
           }, 
           // declaramos las urls de redireccionamiento
           back_urls: { 
-            success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/success", 
-            pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
-            failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
+            //success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/success", 
+            //pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
+            //failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
           }, 
           notification_url: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/webhook", 
           auto_return: "approved" 
