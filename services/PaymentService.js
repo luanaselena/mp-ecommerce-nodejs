@@ -10,7 +10,7 @@ class PaymentService {
       }
     }; 
     //declaro la url en el constructor para poder accederla en toda la class
-    this.mercadoPagoUrl = "https://api.mercadopago.com/checkout"; 
+    this.mercadoPagoUrl = "https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"; 
   }
 
   // recibe las props que le mandamos desde el PaymentController
