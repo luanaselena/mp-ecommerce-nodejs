@@ -10,7 +10,7 @@ class PaymentService {
       }
     }; 
     //declaro la url en el constructor para poder accederla en toda la class
-    this.mercadoPagoUrl = "https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"; 
+    this.mercadoPagoUrl = "https://api.mercadopago.com/checkout"; 
   }
 
   // recibe las props que le mandamos desde el PaymentController
@@ -50,7 +50,7 @@ class PaymentService {
           }, 
           // declaramos las urls de redireccionamiento
           back_urls: { 
-            success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/success", 
+            success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/", 
             pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
             failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
           }, 
@@ -87,7 +87,7 @@ class PaymentService {
         } catch (e) {
           return console.log(e); 
         }
-      }
-    }
+  }
+}
     
-    module.exports = PaymentService;
+module.exports = PaymentService;
