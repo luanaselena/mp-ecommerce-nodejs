@@ -85,7 +85,7 @@ class PaymentService {
            //si el post es exitoso devolvemos la data y si falla se muestra el error
           return request.data; 
         } catch (e) {
-          console.log(e); 
+          return console.log(e); 
         }
       }
     }
