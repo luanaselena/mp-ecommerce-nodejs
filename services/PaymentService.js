@@ -20,7 +20,7 @@ class PaymentService {
     const url = `${this.mercadoPagoUrl}/preferences?access_token=${this.tokensMercadoPago.test.access_token}`; 
     
         //preferencias de pago
-        const preferences = { 
+        const preferences = {
           items: [
             {
               id: "1234", 
@@ -33,7 +33,7 @@ class PaymentService {
               unit_price: parseFloat(price) //lo recibe en el controlador
             } //si se quisiera agregar otro item, se agrega otro en este array
           ],
-          external_reference: "referencia del negocio", 
+          external_reference: "123456789", 
           payer: { 
             name: "Lalo",
             surname: "Landa",
