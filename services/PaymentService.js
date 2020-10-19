@@ -52,7 +52,7 @@ class PaymentService {
           back_urls: { 
             success: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/", 
             pending: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/pending", 
-            failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/error" 
+            failure: "https://luanaselena-mp-commerce-nodejs.herokuapp.com/failure" 
           }, 
           auto_return: "approved", //aca contempla que en caso de aprovado el retorno sea automatico
           payment_methods: { 
