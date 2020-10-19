@@ -38,6 +38,7 @@ app.post("/payment/new", (req, res) =>
 
 app.post("/webhook", (req, res) => PaymentInstance.webhook(req, res));
 app.get('/webhook', function (req, res) {
+  res.render('webhook', req.query);
 });
 
 app.use(express.static('assets'));
